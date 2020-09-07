@@ -12,3 +12,5 @@
         <?php get_sidebar( 'mainsidebar' ); ?>
 
 <?php get_footer(); ?>
+
+<?php // Testing ?>
