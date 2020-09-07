@@ -45,3 +45,15 @@ function aulaallyson_register_navmenu() {
 }
 
 add_action( 'after_setup_theme', 'aulaallyson_register_navmenu');
+
+function blindtomato_scripts() {
+    wp_enqueue_script( 
+        'blindtomato-plusbar', 
+        get_template_directory_uri() . '/assets/js/plusbar.js',
+        array(),
+        '1.0', 
+        true
+    ); 
+}
+
+add_action( 'wp_enqueue_scripts','blindtomato_scripts' );

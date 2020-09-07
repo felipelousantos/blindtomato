@@ -1,11 +1,4 @@
-
-<?php   
-    wp_nav_menu(
-        array (
-            'theme_location' => 'secundary',
-        )      
-    ); 
-?>
+<?php get_template_part( 'template-parts/plusbar' ); ?>
 
 <?php wp_footer(); ?>
 
