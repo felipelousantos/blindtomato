@@ -1,12 +1,12 @@
 <?php 
 
-function aulaallyson_enqueue_style() {
-    wp_enqueue_style( 'aulaallyson-style', get_stylesheet_uri() ); 
+function blindtomato_enqueue_style() {
+    wp_enqueue_style( 'blindtomato-style', get_stylesheet_uri() ); 
 }
 
-add_action( 'wp_enqueue_scripts','aulaallyson_enqueue_style' );
+add_action( 'wp_enqueue_scripts','blindtomato_enqueue_style' );
 
-function aulaallyson_custom_logo_setup() {
+function blindtomato_custom_logo_setup() {
     $defaults = array(
     'height'      => 100,
     'width'       => 400,
@@ -17,9 +17,9 @@ function aulaallyson_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
    }
 
-add_action( 'after_setup_theme', 'aulaallyson_custom_logo_setup' );
+add_action( 'after_setup_theme', 'blindtomato_custom_logo_setup' );
 
-function aulaallyson_register_sidebar() {
+function blindtomato_register_sidebar() {
     register_sidebar( 
         array(
             'name' => 'Main sidebar',
@@ -33,18 +33,17 @@ function aulaallyson_register_sidebar() {
     );
 }
 
-add_action( 'widgets_init', 'aulaallyson_register_sidebar');
+add_action( 'widgets_init', 'blindtomato_register_sidebar');
 
-function aulaallyson_register_navmenu() {
+function blindtomato_register_navmenu() {
     register_nav_menus(  
         array(
-            'primary' => 'Main primary menu',
-            'secundary' => 'My secundary menu',
+            'general' => 'General menu',
         )
     );
 }
 
-add_action( 'after_setup_theme', 'aulaallyson_register_navmenu');
+add_action( 'after_setup_theme', 'blindtomato_register_navmenu');
 
 function blindtomato_scripts() {
     wp_enqueue_script( 
