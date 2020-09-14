@@ -1,15 +1,15 @@
 <div class="plusbar">
 
-<?php   
-     wp_nav_menu(
-        array (
-            'theme_location' => 'primary',
-        )   
-    ); 
-?>
+    <?php   
+        wp_nav_menu(
+            array (
+                'theme_location' => 'general',
+            )   
+        ); 
+    ?>
 
-<?php dynamic_sidebar( 'mainsidebar' ) ?>
+    <?php dynamic_sidebar( 'general' ) ?>
 
-<p>Footer</p>
+    <p>Footer/Copyright text</p>
 
 </div>

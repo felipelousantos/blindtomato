@@ -22,9 +22,9 @@ add_action( 'after_setup_theme', 'blindtomato_custom_logo_setup' );
 function blindtomato_register_sidebar() {
     register_sidebar( 
         array(
-            'name' => 'Main sidebar',
-            'id' => 'mainsidebar',
-            'description' => 'Testing sidebar',
+            'name' => 'General sidebar',
+            'id' => 'general',
+            'description' => 'The site sidebar that shows on the plusbar',
             'before_widget' => '<li id="%1$s" class="widget %2$s">',
             'after_widget'  => '</li>',
             'before_title'  => '<h2 class="widgettitle">',

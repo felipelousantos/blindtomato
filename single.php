@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div style="padding-top: 50px; padding-bottom: 50px;">
-
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : ?>
                 <?php the_post(); ?>
