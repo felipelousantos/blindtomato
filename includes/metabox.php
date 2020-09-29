@@ -21,10 +21,10 @@ add_action( 'add_meta_boxes', 'blindtomato_register_meta_boxes' );
  */
 function blindtomato_my_display_callback( $post ) {
     // Display code/markup goes here. Don't forget to include nonces!
-    $show_title = get_post_meta( $post->ID, 'show_title', true );
-    $checked = checked('on', $show_title, false);
-    echo '<label for="show-title">Show title</label>';  
-    echo '<input type="checkbox" name="show-title" ' . $checked . '>';
+    $hide_title = get_post_meta( $post->ID, 'hide_title', true );
+    $checked = checked('on', $hide_title, false);
+    echo '<label for="hide-title">Hide title</label>';  
+    echo '<input type="checkbox" name="hide-title" ' . $checked . '>';
 }
 
 /**
@@ -35,11 +35,11 @@ function blindtomato_my_display_callback( $post ) {
 function blindtomato_save_meta_box( $post_id ) {
     // Save logic goes here. Don't forget to include nonce checks!
 
-    if ( isset( $_POST['show-title'] ) ) {  
-        error_log( print_r( $_POST['show-title'], true ) );
-        update_post_meta( $post_id , 'show_title', $_POST['show-title'] );
+    if ( isset( $_POST['hide-title'] ) ) {  
+        error_log( print_r( $_POST['hide-title'], true ) );
+        update_post_meta( $post_id , 'hide_title', $_POST['hide-title'] );
     } else {
-        delete_post_meta( $post_id , 'show_title' );
+        delete_post_meta( $post_id , 'hide_title' );
     }
 }
 add_action( 'save_post', 'blindtomato_save_meta_box' );
