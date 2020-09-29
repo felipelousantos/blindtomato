@@ -1,5 +1,7 @@
 <?php 
 
+include_once get_template_directory() . '/includes/metabox.php';
+
 function blindtomato_enqueue_style() {
     wp_enqueue_style( 'blindtomato-style', get_stylesheet_uri() ); 
 }
