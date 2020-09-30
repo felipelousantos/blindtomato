@@ -24,27 +24,7 @@ with others.
 ----------------------------------------------------------------
 
 	0. 	CSS Reset
-	1. 	Document Setup
-	2. 	Element Base
-	3. 	Helper Classes
-	4. 	Site Header
-	5. 	Menu Modal
-	6. 	Search Modal
-	7. 	Page Templates
-		a. 	Template: Cover Template
-		c. 	Template: Full Width
-	8.  Post: Archive
-	9.  Post: Single
-	10. Blocks
-	11. Entry Content
-	12. Comments
-	13. Site Pagination
-	14. Error 404
-	15. Widgets
-	16. Site Footer
-    17. Media Queries
-    ----------------------------------------------------------------
-    100. Testing
+	1. 	Plusbar
 
 ----------------------------------------------------------------------------- */
 
@@ -112,6 +92,46 @@ blockquote::after {
 /*	1. Plusbar
 /* -------------------------------------------------------------------------- */
 
-.plusbar {
-	background-color: aqua;
+.plusbar, .plusbar-overlay {
+	display: none;
+}
+
+#plusbar-open-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.plusbar-activated .plusbar {
+	display: block;
+    background-color: white;
+    color:black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+	width: 400px;
+	overflow-y: scroll;
+}
+
+.plusbar-activated .plusbar-overlay {
+	display: block;
+    position: fixed;
+    left: 0;
+	top: 0;
+	bottom: 0;
+    background: #0000004d;
+    right: 400px;
+}
+
+.plusbar-activated {
+    overflow: hidden;
+}
+
+.plusbar-activated #plusbar-open-button {
+	display: none;
 }

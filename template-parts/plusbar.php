@@ -1,5 +1,7 @@
-<div class="plusbar">
+<button id="plusbar-open-button">+</button>
 
+<div class="plusbar">
+    
     <nav class="nav">
         <?php   
             wp_nav_menu(
@@ -19,3 +21,7 @@
     </footer>
 
 </div>
+
+<button id="plusbar-close-button">-</button>
+
+<span class="plusbar-overlay"></span
