@@ -2,6 +2,8 @@
 
 include_once get_theme_file_path( 'includes/vendors/kirki/class-kirki-installer-section.php' );
 
+include_once get_theme_file_path( 'includes/customize.php' );
+
 include_once get_template_directory() . '/includes/metabox.php';
 
 function blindtomato_enqueue_style() {
